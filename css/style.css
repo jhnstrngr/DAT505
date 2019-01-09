@@ -1,0 +1,84 @@
+body {
+  margin: 0;
+  font-family: 'Montserrat', sans-serif;
+}
+#space {
+  position: absolute;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+}
+
+audio {
+  padding: 10px;
+  padding-bottom: 0px;
+}
+
+#playlist1:hover {
+  color: #FF69B4;
+}
+
+#playlist2:hover {
+  color: #FF0000;
+}
+
+#playlist3:hover {
+  color: #FF8C00;
+}
+
+#playlist4:hover {
+  color: #FFFF00;
+}
+
+#playlist5:hover {
+  color: #7CFC00;
+}
+
+#playlist6:hover {
+  color: #87CEFA;
+}
+
+#playlist7:hover {
+  color: #FF8C00;
+}
+
+#playlist8:hover {
+  color: #0000FF;
+}
+
+#playlist9:hover {
+  color: #8A2BE2;
+}
+
+#playlist10:hover {
+  color: #4B0082;
+}
+
+
+
+#playlist {
+  background-color: rgba(75, 75, 75, 0.4);
+  width: 320px;
+  padding: 20px;
+  position: absolute;
+  z-index: 5;
+}
+
+.active a {
+  color: #808080;
+}
+
+ul {
+  list-style-type: none;
+}
+
+li a {
+  color: #eeeedd;
+  padding: 5px;
+  display: block;
+  text-decoration: none;
+}
+
+li a:hover {
+  color: #ff69b4;
+}
