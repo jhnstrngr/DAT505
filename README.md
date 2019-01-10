@@ -6,3 +6,5 @@ The playlist is displayed on the left side of the screen with a normal audio pla
 It is entirely controlled using the mouse, you can drag to move and use the scroll wheel to zoom in/out.
 
 (UNABLE TO UPLOAD TO CODEPEN BECAUSE OF FILE TYPE RESTRICTIONS)
+
+![alt text](https://raw.githubusercontent.com/jhnstrngr/DAT505/master/1.png)
