@@ -7,4 +7,8 @@ It is entirely controlled using the mouse, you can drag to move and use the scro
 
 (UNABLE TO UPLOAD TO CODEPEN BECAUSE OF FILE TYPE RESTRICTIONS)
 
+SCREENSHOTS:
 ![alt text](https://raw.githubusercontent.com/jhnstrngr/DAT505/master/1.png)
+![alt text](https://raw.githubusercontent.com/jhnstrngr/DAT505/master/2.png)
+![alt text](https://raw.githubusercontent.com/jhnstrngr/DAT505/master/3.png)
+![alt text](https://raw.githubusercontent.com/jhnstrngr/DAT505/master/4.png)
