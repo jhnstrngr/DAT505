@@ -5,6 +5,8 @@ let scene,
     loader,
     logoMaterial,
     logoMesh,
+    albumMaterial,
+    albumMesh,
     texture;
 
 let stars,
@@ -13,7 +15,7 @@ let stars,
 let width = window.innerWidth,
     height = window.innerHeight;
 
-const colors = [0xFFB6C1, 0xC71585, 0xFF69B4];
+var colors = [0xFFB6C1, 0xC71585, 0xFF69B4];
 
 init();
 animate();
@@ -24,7 +26,7 @@ function init() {
   // Create a camera, zoom it out from the model a bit, and add it to the scene.
   camera = new THREE.PerspectiveCamera(60, width / height, 0.1, 1000);
   camera.lookAt(scene.position);
-  camera.position.z = 400;
+  camera.position.z = 450;
 
 // Create a renderer and add it to the DOM.
   renderer = new THREE.WebGLRenderer();
@@ -37,7 +39,7 @@ function init() {
   // Add OrbitControls to pan around with the mouse.
   controls = new THREE.OrbitControls(camera, renderer.domElement);
 
-  const ambientLight = new THREE.AmbientLight(  0x555555 );
+  const ambientLight = new THREE.AmbientLight(0x555555);
   scene.add(ambientLight);
 
   // Create a light and adds it to the scene.
@@ -50,7 +52,7 @@ function init() {
   light.shadow.camera.bottom = -100;
   scene.add(light);
 
-  // Load in the mesh and add it to the scene.
+  // Load the logo into the mesh and add it to the scene.
   loader = new THREE.JSONLoader();
   loader.load( "models/pinkfloydlogo.json", function(geometry){
   logoMaterial = new THREE.MeshLambertMaterial({color: 0xFF1493});
@@ -58,6 +60,21 @@ function init() {
   scene.add(logoMesh);
   logoMesh.position.set(-5, 30, 130);
 });
+
+  // Load album text mesh and add it to the scene.
+  loader = new THREE.JSONLoader();
+  loader.load( "models/thedarksideofthemoon.json", function(geometry){
+  albumMaterial = new THREE.MeshLambertMaterial({color: 0xFFFFFF});
+  albumMesh = new THREE.Mesh(geometry, albumMaterial);
+  scene.add(albumMesh);
+  albumMesh.position.set(0, -32, 130);
+  // var morphTarget = albumMesh.scale.set(2, 2, 2);
+  // albumMesh.scale.set(1, 1, 1);
+  //
+  // albumMesh.morphTarget[0] = morphTarget;
+  // albumMesh.computeMorphNormals();
+  // morphTargets: true;
+  });
 
   drawStars();
   drawMoon();
@@ -139,4 +156,13 @@ function drawStars() {
     mesh.matrixAutoUpdate = false;
     stars.add(mesh);
   }
+
+  // $(document).mousemove(function(e) {
+  //   var $width = ($(document).width())/(252 - 23);
+  //   var $height = ($(document).height())/(253 - 2);
+  //   var $pageX = parseInt(e.pageX / $width, 10) + 23;
+  //   var $pageY = parseInt(e.pageY / $height, 10) + 2;
+  //   colors = "(" + $pageX + "," + $pageY + "," + $pageX + ")";
+  //   console.log(colors);
+  // });
 }
